@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Borgz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle">
+    <div class="sidebar">
+        <h2>BORGZ</h2>
+        <ul>
+            <li class="active"><a href="genview.html">Dashboard</a></li>
+            <li><a href="book-table.html">Book Table</a></li>
+            <li><a href="reservations.html">My Reservations</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <label for="theme-toggle" class="theme-label">Switch Theme</label>
+    </div>
+    <div class="main">
+        <div class="header">
+            <div>
+                <h2 style="font-size: 24px;">Welcome back, Guest!</h2>
+                <p style="color: var(--text-muted);">Here's what's happening today.</p>
+            </div>
+            <div class="profile-container">
+                <span style="cursor: pointer;">User Profile ▼</span>
+                <div class="profile-dropdown">
+                    <a href="profile.html">My Profile</a>
+                    <a href="admin.html">Admin View</a>
+                    <a href="super-admin.html">Super Admin View</a>
+                    <a href="index.html" style="color: #e74c3c; border-top: 1px solid var(--border-color);">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card"><h3>Current Reservations</h3><p>6</p></div>
+            <div class="card"><h3>Hours Played</h3><p>43</p></div>
+            <div class="card"><h3>Reward Points</h3><p>1,250</p></div>
+            <div class="card"><h3>Upcoming Bookings</h3><p>7</p></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+            <div class="panel">
+                <h3>Upcoming Reservation</h3>
+                <p style="color: var(--text-muted); margin-top: 15px;">No upcoming reservations.</p>
+                <button class="button">Book a Table</button>
+            </div>
+            <div class="panel">
+                <h3 style="color: var(--accent-green);">Announcements</h3>
+                <div style="margin-top: 15px;">
+                    <strong style="display: block; font-size: 14px;">Weekend Tournament</strong>
+                    <p style="font-size: 12px; color: var(--text-muted);">Join our tournament this Saturday!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

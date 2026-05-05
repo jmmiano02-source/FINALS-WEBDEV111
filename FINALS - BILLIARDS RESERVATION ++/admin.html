@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Borgz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle">
+    <div class="sidebar">
+        <h2 style="color: #3498db; border-color: #3498db;">ADMIN</h2>
+        <ul>
+            <li class="active"><a href="admin.html">Dashboard Home</a></li>
+            <li><a href="#">Manage Contacts</a></li>
+            <li><a href="#">Manage Reservations</a></li>
+            <li><a href="#">Menu Settings</a></li>
+            <li><a href="#">Manage Accounts</a></li>
+            <li style="margin-top: 20px;"><a href="genview.html">← Back to User</a></li>
+        </ul>
+        <label for="theme-toggle" class="theme-label">Switch Theme</label>
+    </div>
+    <div class="main">
+        <div class="header"><h2>Admin Control Panel</h2></div>
+        <div class="cards">
+            <div class="card"><h3>Total Contacts</h3><p>124</p></div>
+            <div class="card"><h3>Active Reservations</h3><p>12</p></div>
+        </div>
+        <div class="panel">
+            <h3>Recent Activity</h3>
+            <p style="color: var(--text-muted); margin-top: 10px;">New reservation request for Table 04.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Table - Borgz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle">
+    <div class="sidebar">
+        <h2>BORGZ</h2>
+        <ul>
+    <li><a href="genview.html">Dashboard</a></li>
+    <li><a href="book-table.html">Book Table</a></li>
+    <li><a href="reservations.html">My Reservations</a></li>
+    <li><a href="rewards.html">Rewards</a></li>
+    <li><a href="announcements.html">Announcements</a></li>
+    <li><a href="tables.html">Tables</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="logout.html">Logout</a></li>
+</ul>
+        <label for="theme-toggle" class="theme-label">Switch Theme</label>
+    </div>
+    <div class="main">
+        <div class="header">
+            <h2>Book a Table</h2>
+        </div>
+        <div class="panel">
+            <h3>New Reservation</h3>
+            <p style="color: var(--text-muted); margin: 15px 0;">Select an available slot below.</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                <div class="card" style="cursor:pointer; border-color: var(--accent-green);">10:00 AM</div>
+                <div class="card" style="cursor:pointer;">02:00 PM</div>
+                <div class="card" style="cursor:pointer;">06:00 PM</div>
+            </div>
+            <button class="button">Proceed to Payment</button>
+        </div>
+    </div>
+</body>
+</html>
