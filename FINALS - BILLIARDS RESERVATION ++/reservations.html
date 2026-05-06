@@ -4,35 +4,130 @@
     <meta charset="UTF-8">
     <title>My Reservations - Borgz</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .res-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--accent-green);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            position: relative;
+        }
+
+        .res-info h4 {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .res-info p {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .res-actions {
+            grid-column: span 5;
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-green);
+            color: #000;
+        }
+
+        .status-confirmed { color: var(--accent-green) !important; }
+        .status-pending { color: #f1c40f !important; }
+    </style>
 </head>
 <body>
     <input type="checkbox" id="theme-toggle">
     <div class="sidebar">
         <h2>BORGZ</h2>
         <ul>
-    <li><a href="genview.html">Dashboard</a></li>
-    <li><a href="book-table.html">Book Table</a></li>
-    <li><a href="reservations.html">My Reservations</a></li>
-    <li><a href="rewards.html">Rewards</a></li>
-    <li><a href="announcements.html">Announcements</a></li>
-    <li><a href="tables.html">Tables</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="logout.html">Logout</a></li>
-</ul>
+            <li><a href="genview.html">Dashboard</a></li>
+            <li><a href="book-table.html">Book Table</a></li>
+            <li class="active"><a href="reservations.html">My Reservations</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
         <label for="theme-toggle" class="theme-label">Switch Theme</label>
     </div>
+
     <div class="main">
         <div class="header">
-            <h2>Active Bookings</h2>
-        </div>
-        <div class="panel">
-            <div class="announcement">
-                <strong style="font-size: 18px;">Standard Table #08</strong>
-                <p>Status: Confirmed for 05/10/2026</p>
+            <div>
+                <h2 style="font-size: 24px;">My Reservations</h2>
+                <p style="color: var(--text-muted);">Manage your upcoming table bookings.</p>
             </div>
-            <div class="announcement" style="opacity: 0.5; margin-top: 20px;">
-                <strong>VIP Table #01</strong>
-                <p>Status: Completed on 04/28/2026</p>
+            <div class="profile-container">
+                <span style="cursor: pointer;">User Profile ▼</span>
+                <div class="profile-dropdown">
+                    <a href="profile.html">My Profile</a>
+                    <a href="admin.html">Admin View</a>
+                    <a href="index.html" style="color: #e74c3c; border-top: 1px solid var(--border-color);">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reservation 1 -->
+        <div class="res-card">
+            <div class="res-info"><h4>Date</h4><p>2026-05-08</p></div>
+            <div class="res-info"><h4>Time</h4><p>14:00</p></div>
+            <div class="res-info"><h4>Table</h4><p>Table 3</p></div>
+            <div class="res-info"><h4>Duration</h4><p>2 hours</p></div>
+            <div class="res-info"><h4>Status</h4><p class="status-confirmed">Confirmed</p></div>
+            <div class="res-actions">
+                <button class="btn-outline">Modify</button>
+                <button class="btn-outline" style="border-color: var(--text-muted); color: var(--text-muted);">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Reservation 2 -->
+        <div class="res-card">
+            <div class="res-info"><h4>Date</h4><p>2026-05-10</p></div>
+            <div class="res-info"><h4>Time</h4><p>18:00</p></div>
+            <div class="res-info"><h4>Table</h4><p>Table 7</p></div>
+            <div class="res-info"><h4>Duration</h4><p>3 hours</p></div>
+            <div class="res-info"><h4>Status</h4><p class="status-confirmed">Confirmed</p></div>
+            <div class="res-actions">
+                <button class="btn-outline">Modify</button>
+                <button class="btn-outline" style="border-color: var(--text-muted); color: var(--text-muted);">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Reservation 3 -->
+        <div class="res-card">
+            <div class="res-info"><h4>Date</h4><p>2026-05-12</p></div>
+            <div class="res-info"><h4>Time</h4><p>16:00</p></div>
+            <div class="res-info"><h4>Table</h4><p>Table 5</p></div>
+            <div class="res-info"><h4>Duration</h4><p>2 hours</p></div>
+            <div class="res-info"><h4>Status</h4><p class="status-pending">Pending</p></div>
+            <div class="res-actions">
+                <button class="btn-outline">Modify</button>
+                <button class="btn-outline" style="border-color: var(--text-muted); color: var(--text-muted);">Cancel</button>
             </div>
         </div>
     </div>
